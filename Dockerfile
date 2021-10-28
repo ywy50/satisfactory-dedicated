@@ -10,7 +10,7 @@ test -d ${STEAMAPPDIR}/saves || mkdir ${STEAMAPPDIR}/saves\n\
 test -L ~/.config/Epic/FactoryGame/Saved/SaveGames || ln -s ${STEAMAPPDIR}/saves ~/.config/Epic/FactoryGame/Saved/SaveGames\n\
 ${STEAMAPPDIR}/FactoryServer.sh" >> ${HOMEDIR}/entry.sh
 RUN chmod +x "${HOMEDIR}/entry.sh" && chown -R "${USER}:${USER}" "${HOMEDIR}"
-RUN chmod -R 775 /home/steam/
+RUN chmod -R 775 ${HOMEDIR}
 USER ${USER}
 WORKDIR ${HOMEDIR}
 CMD ["bash", "entry.sh"]
