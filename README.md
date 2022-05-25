@@ -4,7 +4,7 @@ Docker repo for Satisfactory dedicated server
 ---
 ### Build Image
 
-`docker build -t satisfactory .`
+`docker build -t satisfactory:0.1.0 .`
 
 ### Run Container
 
